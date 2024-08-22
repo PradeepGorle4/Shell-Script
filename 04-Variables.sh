@@ -4,8 +4,7 @@
 Person1=$1
 Person2=$2
 
-# Person1 and Person 2 are the variables here, however we use arguments here.
-# so when ever a person runs the script they need to enter the arguments and those values will be directly substitued in $1 and $2resp#
+# Person1 and Person 2 are the variables here, however we use arguments here.so when ever a person runs the script they need to enter the arguments and those values will be directly substitued in $1 and $2resp.
 
 
 echo "$Person1: Hi $Person2, how are you..?"
