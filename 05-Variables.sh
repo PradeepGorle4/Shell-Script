@@ -5,7 +5,7 @@
 
 echo "Please enter your username: "
 
-read USERNAME  # This value you enter is automatically taken as username variable.
+read -s USERNAME  # This value you enter is automatically taken as username variable.
 
 echo "your username is : " $USERNAME 
 
@@ -13,7 +13,7 @@ echo "your username is : " $USERNAME
 
 echo "Please enter your password: "
 
-read PASSWORD
+read -s PASSWORD
 
 echo "Your Password is: " $PASSWORD # Again, please do not print usernames and passwords in scripts, this is just for practice purpose.
 
