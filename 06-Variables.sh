@@ -18,7 +18,7 @@ num2=$2
 
 Sum=$(($num1+$num2))
 
-echo "The total is: " $Sum
+echo "The total is: $Sum "
 
 
 echo "Done, moving on to second method"
