@@ -6,17 +6,20 @@
 
 echo "Please enter the first number: "
 
-read num1
+read -s num1
 
 num1=$1
 
 echo "Please enter the second number: "
 
-read num2
+read -s num2
 
 num2=$2
 
 Sum=$(($num1+$num2))
+
+echo "The total is: " $Sum
+
 
 echo "Done, moving on to second method"
 
