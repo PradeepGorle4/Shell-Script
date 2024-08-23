@@ -8,17 +8,13 @@ echo "Please enter the first number: "
 
 read -s num1
 
-num1=$1
-
 echo "Please enter the second number: "
 
 read -s num2
 
-num2=$2
+sum=$(($num1+$num2))
 
-Sum=$(($num1+$num2))
-
-echo "The total is: $Sum "
+echo "The total of $num1 and $num2 is: $sum "
 
 
 echo "Done, moving on to second method"
