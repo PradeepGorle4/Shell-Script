@@ -28,7 +28,7 @@ SUM=$(($NUMBER1+$NUMBER2))
 
 echo "The Sum of two numbers is : " $SUM
 
-echo "Done".
+echo "Done."
 
 '
 
