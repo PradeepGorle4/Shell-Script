@@ -23,7 +23,7 @@ echo "The total is: " $Sum
 
 echo "Done, moving on to second method"
 
-
+:'
 
 NUMBER1=$1
 NUMBER2=$2
@@ -33,5 +33,7 @@ SUM=$(($NUMBER1+$NUMBER2))
 echo "The Sum of two numbers is : " $SUM
 
 echo "Done".
+
+'
 
 
