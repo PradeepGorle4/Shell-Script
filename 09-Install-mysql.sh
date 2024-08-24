@@ -11,6 +11,13 @@ else
     echo "you are root user"
 fi 
 
+EXITSTATUS=$($?)
+if [ $EXITSTATUS -ne 0 ]
+then
+    echo "You are not a root user, throwing an error due to it"
+else
+    echo "Proceeding with Installation"
+fi
 yum install mysql
 
 
