@@ -10,4 +10,7 @@ then
     exit 1 # we can give anyother number except 0 here as if we give 0 it takes exit status as success and proceeds to next line.
 else
     echo "you are root user"
-fi 
+fi
+
+yum install mysql -y
+
