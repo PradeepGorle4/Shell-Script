@@ -24,7 +24,6 @@ else
     echo "You are root user"
 fi
 
-PRECHECK=$(rpm -q $1)
 
 Software_precheck() {
 if [ $? -ne 0 ]
@@ -36,12 +35,14 @@ else
 fi
 }
 
+rpm -q $1
 Software_precheck "mysql"
 
 yum install mysql -y
 
 VALIDATE "MYSQL"
 
+rpm -q $1
 Software_precheck "git"
 
 yum install git -y
