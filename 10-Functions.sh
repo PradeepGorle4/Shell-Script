@@ -24,7 +24,7 @@ else
     echo "You are root user"
 fi
 
-PRECHECK=$(rpm -q $1)
+PRECHECK=$(rpm -q ($1))
 
 Software_precheck() {
 if [ $PRECHECK -ne 0 ]
