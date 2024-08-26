@@ -4,7 +4,7 @@ echo "Checking for root access"
 ID=$(id -u)
 
 VALIDATE() {
-    if [$? -ne 0]
+    if [ $? -ne 0 ]
 then
     echo "ERROR: Installing $1 ....FAILED"
     exit 1
@@ -13,7 +13,7 @@ else
 fi
 }
 
-if [$ID -ne 0]
+if [ $ID -ne 0 ]
 then
     echo "ERROR: Please run with root access"
     exit 1
