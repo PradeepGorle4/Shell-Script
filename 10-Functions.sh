@@ -24,10 +24,10 @@ else
     echo "You are root user"
 fi
 
-PRECHECK=$(rpm -q ($1))
+PRECHECK=$(rpm -q $1)
 
 Software_precheck() {
-if [ $PRECHECK -ne 0 ]
+if [ $? -ne 0 ]
 then
     echo "PROCEEDING WITH INSTALLATION of $1"
 else
