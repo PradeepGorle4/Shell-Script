@@ -14,7 +14,7 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log
 
 if [ $ID -ne 0 ]
 do
-    echo -e "ERROR: $R you are not a root user $N"
+    echo -e " $R ERROR: you are not a root user $N"
     exit 1
 else 
     echo -e "$G You are a root user $N"
@@ -33,3 +33,7 @@ VALIDATE() {
 yum install git -y &>> $LOGFILE
 
 VALIDATE "GIT"
+
+yum install mysql -y &>> $LOGFILE
+
+VALIDATE "MYSQL"
