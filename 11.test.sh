@@ -32,6 +32,4 @@ VALIDATE() {
 
 yum install git &>> $LOGFILE
 
-VALIDATE Git
-
-
+VALIDATE "GIT"
