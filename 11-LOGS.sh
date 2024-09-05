@@ -21,7 +21,7 @@ then
     echo -e "$R ERROR: Installing $1 ....FAILED $N"
     exit 1
 else
-    echo -e " $G Installing $1 ....SUCCESS $N"
+    echo -e "$G Installing $1 ....SUCCESS $N"
 fi
 }
 
