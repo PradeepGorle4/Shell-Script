@@ -11,7 +11,7 @@ LOGFILE="/tmp/$0-$TIMESTAMP.log"
 
 echo "Script started executing at $TIMESTAMP" &>> $LOGFILE
 
-VALIDATE() {
+VALIDATE(){
     if [ $? -ne 0 ]
     then
         echo -e "$R ERROR:: $1....FAILED $N"
@@ -23,7 +23,7 @@ VALIDATE() {
 
 if [ $ID -ne 0 ]
 then
-    echo -e "$R ERROR : you are not root user, run the script with sudo access $N" &>> $LOGFILE
+    echo -e "$R ERROR : you are not root user, run the script with sudo access $N"
     exit 1 # you can give anything other than 0
 else
     echo -e "$G You are root user $N" 
@@ -36,14 +36,13 @@ fi # fi means reverse of if, indicating condition end
 # $? - is for exit status of previous cmd. if it is 0 - exit status of prev cmd- success, other than 0- failure
 for package in $@
 do
-    yum list installed $package # checking if package is already installed or not
+    yum list installed $package &>> $LOGFILE # checking if package is already installed or not
     if [ $? -ne 0 ] # if not installed
     then # install it
-        echo "$Y Installing $package $N &>> $LOGFILE"
         yum install $package -y &>> $LOGFILE
         VALIDATE "Installation of $package" # Validate it &>> $LOGFILE
     else
-        echo -e "$Y The package $package is already installed...Skipping It $N "&>> $LOGFILE   # else skip it 
+        echo -e "The package $package is already installed $Y ...Skipping It $N "  # else skip it 
     fi
 done
 
